@@ -1,0 +1,8 @@
+= image_tag(@art_piece.image_url)
+%br
+= @art_piece.author
+= @art_piece.title
+
+= link_to "Dislike", rate_art_piece_path(id: @art_piece.id, type: "dislike")
+= link_to "Skip", rate_art_piece_path(id: @art_piece.id, type: "skip")
+= link_to "Like", rate_art_piece_path(id: @art_piece.id, type: "like")
