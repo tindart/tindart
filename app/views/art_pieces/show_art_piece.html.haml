@@ -1,8 +1,18 @@
-= image_tag(@art_piece.image_url)
-%br
-= @art_piece.author
-= @art_piece.title
+- content_for :top do
+  = render 'partials/navigation'
 
-= link_to "Dislike", rate_art_piece_path(id: @art_piece.id, type: "dislike")
-= link_to "Skip", rate_art_piece_path(id: @art_piece.id, type: "skip")
-= link_to "Like", rate_art_piece_path(id: @art_piece.id, type: "like")
+%main.l-container
+  .art-piece
+    .art-piece__holder
+      = image_tag(@art_piece.image_url, class: 'art-piece__image')
+
+    %h2.art-piece__title= @art_piece.title
+    %small.art-piece__author= @art_piece.author
+
+    .actions
+      = link_to '👎', rate_art_piece_path(id: @art_piece.id, type: 'dislike'),
+        class: 'actions__link actions__link--dislike'
+      = link_to '🙄', rate_art_piece_path(id: @art_piece.id, type: 'skip'),
+        class: 'actions__link actions__link--skip'
+      = link_to '👍', rate_art_piece_path(id: @art_piece.id, type: 'like'),
+        class: 'actions__link actions__link--like'

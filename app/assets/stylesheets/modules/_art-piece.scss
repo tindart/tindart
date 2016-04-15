@@ -1,0 +1,33 @@
+// --- art-piece ---------------------------------------------------------------
+
+.art-piece {
+  text-align: center;
+
+  &__holder {
+    display: inline-block;
+    border: $base--gap/2 solid #ceac6e;
+    margin: $base--gap/2;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: -$base--gap;
+      left: -$base--gap;
+      right: -$base--gap;
+      bottom: -$base--gap;
+      content: "";
+      border: $base--gap/2 solid #ebc47c;
+    }
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-family: Courgette, cursive;
+  }
+
+  &__author {}
+}
