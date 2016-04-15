@@ -2,7 +2,13 @@
 
 $base--gap:          1rem;
 
-
 // --- variables: colors -------------------------------------------------------
 
 $color--white:       #fff;
+$color--black:       #000;
+$color--red:         #cc3333;
+
+// --- variables: responsive ---------------------------------------------------
+
+$rwd--tablet:        48rem;
+$rwd--desktop:       64rem;

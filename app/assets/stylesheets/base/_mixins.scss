@@ -1,1 +1,25 @@
 // --- mixins ------------------------------------------------------------------
+
+@mixin tablet() {
+  @media screen and (min-width: $rwd--tablet) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: $rwd--desktop) {
+    @content;
+  }
+}
+
+@mixin responsive-image($image-path, $format: 'jpg') {
+  background-image: image-url("#{$image-path}.#{$format}");
+
+  @include tablet() {
+    background-image: image-url("#{$image-path}-tablet.#{$format}");
+  }
+
+  @include desktop() {
+    background-image: image-url("#{$image-path}-desktop.#{$format}");
+  }
+}

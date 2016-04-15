@@ -9,13 +9,4 @@
     display: flex;
     justify-content: center;
   }
-
-  &__logo {
-    background: image-url('logo.png') no-repeat;
-    background-size: 3rem 3rem;
-    padding-left: $base--gap*3.5;
-    font-family: Courgette, cursive;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
 }
