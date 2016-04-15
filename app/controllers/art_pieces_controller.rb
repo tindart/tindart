@@ -1,4 +1,5 @@
 class ArtPiecesController < ApplicationController
+  before_action :authenticate_user!
 
   def show_art_piece
     @art_piece = ArtPiece.order("RANDOM()").first
