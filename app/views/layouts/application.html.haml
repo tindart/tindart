@@ -3,7 +3,7 @@
   %head
     %title= Tindart
 
-    %meta{ charset: "utf-8" }
+    %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no' }
 
     %link{ href: asset_path('icons/apple-icon-57x57.png'), rel: 'apple-touch-icon', sizes: '57x57' }
@@ -24,9 +24,8 @@
 
     = csrf_meta_tag
   %body
-    = render 'partials/navigation'
+    = yield :top
 
-    %main.l-container
-      = yield
+    = yield
 
     = javascript_include_tag :application, 'data-turbolinks-track': true

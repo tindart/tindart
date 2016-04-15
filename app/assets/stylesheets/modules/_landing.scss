@@ -1,0 +1,58 @@
+// --- landing -----------------------------------------------------------------
+
+.landing {
+  @include responsive-image('landing/background');
+  background-color: #f3f4f6;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+
+  &__container {
+    @extend %l-container;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: $base--gap*1.5 $base--gap;
+    color: #696969;
+
+    @include tablet {
+      font-size: 1.5rem;
+      margin-top: $base--gap*2.5;
+      margin-bottom: $base--gap*2.5;
+    }
+  }
+
+  &__cta {
+    background: $color--red;
+    bottom: $base--gap;
+    border-radius: $base--gap*2;
+    color: $color--white;
+    display: inline-block;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -7.5rem;
+    padding: $base--gap $base--gap*1.5;
+    position: absolute;
+    text-transform: uppercase;
+    transition: background-color .2s ease-in-out;
+    width: 12rem;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: darken($color--red, 10%);
+    }
+
+    @include tablet {
+      bottom: auto;
+      left: auto;
+      margin-left: 0;
+      position: static;
+    }
+  }
+}

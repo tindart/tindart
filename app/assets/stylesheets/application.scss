@@ -1,8 +1,7 @@
 // --- vendor ------------------------------------------------------------------
 
 //= require normalize.css
-//= require sass-mediaqueries
-@import url(https://fonts.googleapis.com/css?family=Courgette&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext);
 
 // --- base --------------------------------------------------------------------
 
@@ -16,5 +15,4 @@
 
 // --- modules -----------------------------------------------------------------
 
-//= require_tree ./modules
 @import "modules/*";

@@ -27,7 +27,6 @@ gem 'devise'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-normalize.css', '~> 4.1.1'
-  gem 'rails-assets-sass-mediaqueries', '~> 1.6.1'
 end
 
 # Use ActiveModel has_secure_password
