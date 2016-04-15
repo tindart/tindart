@@ -1,1 +1,6 @@
-Hello!
+%section.landing
+  .logo.logo--landing= 'tindart'
+  .landing__container
+    %h2.landing__title= 'Muzea są zbyt fajne, by zwiedzać je samotnie.'
+    = link_to rate_index_path, class: 'landing__cta' do
+      Find your match now

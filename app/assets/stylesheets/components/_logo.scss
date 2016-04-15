@@ -1,0 +1,27 @@
+// --- logo --------------------------------------------------------------------
+
+.logo {
+  background: image-url('logo.png') no-repeat;
+  background-size: 3rem 3rem;
+  color: $color--black;
+  padding-left: $base--gap*3;
+  font-family: Courgette, cursive;
+  font-size: 2rem;
+  line-height: 3rem;
+
+  &--landing {
+    background-size: 2rem 2rem;
+    display: inline-block;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+
+    @include tablet {
+      background-size: 3rem 3rem;
+      padding-left: $base--gap*3;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+}
