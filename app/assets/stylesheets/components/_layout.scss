@@ -1,0 +1,14 @@
+// --- layout: variables -------------------------------------------------------
+
+$layout--gap: $base--gap*2;
+
+// --- layout ------------------------------------------------------------------
+
+%l-container,
+.l-container {
+  margin: 0 auto;
+  max-width: 80rem - $layout--gap;
+  min-width: 20rem - $layout--gap;
+  padding-left: $base--gap;
+  padding-right: $base--gap;
+}
