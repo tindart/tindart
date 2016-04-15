@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @art_piece.name %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @art_piece.genre %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @art_piece.link %>
+</p>
+
+<%= link_to 'Edit', edit_art_piece_path(@art_piece) %> |
+<%= link_to 'Back', art_pieces_path %>

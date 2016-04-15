@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'art_pieces#index'
+  resources :art_pieces
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
