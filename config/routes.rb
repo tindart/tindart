@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  get '/art_piece'      => 'art_pieces#show_art_piece', as: :show_art_piece
-  get '/rate_art_piece' => 'art_pieces#rate_art_piece', as: :rate_art_piece
+  get '/art_piece'      => 'art_pieces#show_art_piece',       as: :show_art_piece
+  get '/rate_art_piece' => 'art_pieces#rate_art_piece',       as: :rate_art_piece
+  get '/your_match'     => 'art_pieces#match_place_and_user', as: :your_match
 
   resources :art_pieces
   resources :rate
