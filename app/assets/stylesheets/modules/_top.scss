@@ -1,0 +1,21 @@
+// --- top ---------------------------------------------------------------------
+
+.top {
+  margin-bottom: $base--gap;
+  padding: $base--gap 0;
+
+  &__container {
+    @extend %l-container;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    background: url(logo.png) no-repeat;
+    background-size: 3rem 3rem;
+    padding-left: $base--gap*3.5;
+    font-family: Courgette, cursive;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
