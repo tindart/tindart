@@ -1,3 +1,9 @@
-%h2 You got your art mate!
-= @user_match.username
-= @location_match
+- content_for :top do
+  = render 'partials/navigation'
+
+%main.l-container
+  %section.match
+    %h2.match__title= 'Znaleźliśmy użytkownika o podobnym guście!'
+    .match__user= @user_match.username
+    %p= 'Możecie się poznać idąc do:'
+    = @location_match
