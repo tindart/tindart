@@ -1,0 +1,35 @@
+- content_for :top do
+  = render 'partials/navigation'
+
+%main.l-container
+  .panel
+    .panel__header
+      %h2.panel__title= 'Zaloguj się'
+
+    .panel__body
+      = form_for(resource, as: resource_name, url: session_path(resource_name), class: 'inputs') do |f|
+        .inputs__row
+          .inputs__row-label
+            = f.label :email, 'E-mail', class: 'inputs__label'
+          .inputs__row-input
+            = f.email_field :email, autofocus: true, class: 'inputs__input'
+
+        .inputs__row
+          .inputs__row-label
+            = f.label :password, 'Hasło', class: 'inputs__label'
+          .inputs__row-input
+            = f.password_field :password, autocomplete: 'off', class: 'inputs__input'
+
+        - if devise_mapping.rememberable?
+          .inputs__row.inputs__row--inline
+            .inputs__row-input
+              = f.check_box :remember_me, class: 'inputs__input'
+            .inputs__row-label
+              = f.label :remember_me, 'Zapamiętaj moje dane', class: 'inputs__label'
+
+        .inputs__row
+          %button{ type: 'submit', class: 'inputs__submit' }
+            = 'Zaloguj się'
+
+    .panel__footer
+      = render 'devise/shared/links'
