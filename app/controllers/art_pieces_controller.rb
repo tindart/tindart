@@ -33,7 +33,7 @@ class ArtPiecesController < ApplicationController
     def calculate_top_tags(number_of_tags)
       art_pieces_ids = current_user.events.where(event_type: 'like').pluck(:art_piece_id)
       tags = ArtPiece.where(id: art_pieces_ids).includes(:tags).pluck(:name)
-      tags_counts = Hash.new(0)i
+      tags_counts = Hash.new(0)
       tags.each { |tag| tags_counts[tag] += 1 }
       tags_counts.sort_by { |tag, count| count }.reverse.first(number_of_tags).to_h.keys
     end
