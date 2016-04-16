@@ -24,7 +24,7 @@ class ArtPiecesController < ApplicationController
     top_tag_id = Tag.where(name: top_tag).first.id
 
     @location = set_location(top_tag_id)
-    @users    = User.where(top_tag: top_tag)
+    @users    = User.where(top_tag: @location.name)
     # TODO send notification
 
   end
