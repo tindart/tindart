@@ -1,0 +1,11 @@
+// --- match -------------------------------------------------------------------
+
+.match {
+  margin-bottom: $base--gap*2;
+
+  &__title {
+    margin-top: $base--gap;
+    margin-bottom: $base--gap*2;
+    text-align: center;
+  }
+}

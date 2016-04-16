@@ -9,6 +9,7 @@
 
   &__photo {
     @include tablet {
+      float: right;
       width: 50%;
       margin-left: 5%;
     }
