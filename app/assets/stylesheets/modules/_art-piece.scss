@@ -1,7 +1,7 @@
 // --- art-piece ---------------------------------------------------------------
 
 .art-piece {
-  margin-bottom: $base--gap*8;
+  margin-bottom: $base--gap*5;
   text-align: center;
 
   &__holder {
@@ -31,4 +31,8 @@
   }
 
   &__author {}
+
+  @include tablet {
+    margin-bottom: $base--gap*8;
+  }
 }
