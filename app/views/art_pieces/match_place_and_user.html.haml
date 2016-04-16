@@ -3,8 +3,18 @@
 
 %main.l-container
   %section.match
-    %h2.match__title= 'Znaleźliśmy użytkowników o podobnym guście!'
-    - @users.each do |user|
-      .match__user= user.username
-    %p= 'Możecie się poznać idąc do:'
-    = @location
+    %h2.match__title= 'Tu znajdziesz sztukę w Twoim typie!'
+
+    .venue
+      %h3.venue__title
+        = @location.name
+      = image_tag @location.photo, class: 'venue__photo'
+      .venue__description
+        = @location.description
+      .venue__address
+        = @location.address
+
+    - unless @users.empty?
+      %h3= 'Tu znajdziesz sztukę w Twoim typie!'
+      - @users.each do |user|
+        %div= user.username

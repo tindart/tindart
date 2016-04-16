@@ -1,0 +1,20 @@
+// --- venue -------------------------------------------------------------------
+
+.venue {
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__photo {
+    @include tablet {
+      width: 40%;
+      margin-left: 5%;
+    }
+  }
+
+  &__address {
+    font-size: .875rem;
+  }
+}
