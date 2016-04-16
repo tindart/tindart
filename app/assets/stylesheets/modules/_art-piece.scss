@@ -31,8 +31,4 @@
   }
 
   &__author {}
-
-  @include tablet {
-    margin-bottom: $base--gap*8;
-  }
 }
