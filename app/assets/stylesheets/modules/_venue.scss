@@ -1,20 +1,21 @@
 // --- venue -------------------------------------------------------------------
 
 .venue {
-  &__title {
-  }
+  &__title {}
 
   &__description {
+    color: #777;
   }
 
   &__photo {
     @include tablet {
-      width: 40%;
+      width: 50%;
       margin-left: 5%;
     }
   }
 
   &__address {
+    margin: $base--gap 0;
     font-size: .875rem;
   }
 }

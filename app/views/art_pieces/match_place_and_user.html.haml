@@ -15,6 +15,7 @@
         = @location.address
 
     - unless @users.empty?
-      %h3= 'Tu znajdziesz sztukę w Twoim typie!'
+      %h3= 'Kogo jeszcze możesz spotkać?'
+      %ul
       - @users.each do |user|
-        %div= user.username
+        %li= user.username
