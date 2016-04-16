@@ -1,4 +1,6 @@
 class Location < ActiveRecord::Base
-    has_many :art_piece
-    has_many :tags, through :art_tags
+
+  has_many :location_tags
+  has_many :tags, through: :location_tags
+
 end
