@@ -1,0 +1,24 @@
+- content_for :top do
+  = render 'partials/navigation'
+
+%main.l-container
+  .panel
+    .panel__header
+      %h2.panel__title= 'Odzyskaj hasło'
+
+    .panel__body
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = devise_error_messages!
+
+        .inputs__row
+          .inputs__row-label
+            = f.label :email, 'E-mail', class: 'inputs__label'
+          .inputs__row-input
+            = f.email_field :email, autofocus: true, class: 'inputs__input'
+
+        .inputs__row
+          %button{ type: 'submit', class: 'inputs__submit' }
+            = 'Odzyskaj hasło'
+
+    .panel__footer
+      = render 'devise/shared/links'
