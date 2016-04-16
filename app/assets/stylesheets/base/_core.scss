@@ -7,7 +7,12 @@ body {
 }
 
 a {
+  color: $color--red;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img {
