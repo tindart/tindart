@@ -24,6 +24,10 @@
       &:hover {
         background-color: darken($color--red, 5%);
       }
+
+      @include desktop {
+        left: 0;
+      }
     }
 
     &--like {
@@ -32,11 +36,29 @@
       &:hover {
         background-color: darken($color--green, 5%);
       }
+
+      @include desktop {
+        right: 0;
+      }
     }
 
     @include tablet {
       line-height: 6rem;
       font-size: 3rem;
     }
+
+    @include desktop {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include desktop {
+    position: static;
   }
 }
