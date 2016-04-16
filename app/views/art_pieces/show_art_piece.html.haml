@@ -12,7 +12,5 @@
     .actions
       = link_to '👎', rate_art_piece_path(id: @art_piece.id, type: 'dislike'),
         class: 'actions__link actions__link--dislike'
-      = link_to '🙄', rate_art_piece_path(id: @art_piece.id, type: 'skip'),
-        class: 'actions__link actions__link--skip'
       = link_to '👍', rate_art_piece_path(id: @art_piece.id, type: 'like'),
         class: 'actions__link actions__link--like'
