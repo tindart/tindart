@@ -10,22 +10,29 @@
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
 
-        %div
-          = f.label :email
-          = f.email_field :email, autofocus: true
+        .inputs__row
+          .inputs__row-label
+            = f.label :email, 'E-mail', class: 'inputs__label'
+          .inputs__row-input
+            = f.email_field :email, autofocus: true, class: 'inputs__input'
 
-        %div
-          = f.label :password
-          - if @minimum_password_length
-            %em= "(#{@minimum_password_length} characters minimum)"
-          %br
-          = f.password_field :password, autocomplete: 'off'
+        .inputs__row
+          .inputs__row-label
+            = f.label :password, 'Hasło', class: 'inputs__label'
+            - if @minimum_password_length
+              %em= "(minimum #{@minimum_password_length} znaków)"
+          .inputs__row-input
+            = f.password_field :password, autocomplete: 'off', class: 'inputs__input'
 
-        %div
-          = f.label :password_confirmation
-          = f.password_field :password_confirmation, autocomplete: "off"
+        .inputs__row
+          .inputs__row-label
+            = f.label :password_confirmation, 'Powtórz hasło', class: 'inputs__label'
+          .inputs__row-input
+            = f.password_field :password_confirmation, autocomplete: 'off', class: 'inputs__input'
 
-        %div
-          = f.submit "Sign up"
+        .inputs__row
+          %button{ type: 'submit', class: 'inputs__submit' }
+            = 'Załóż konto'
 
+    .panel__footer
       = render 'devise/shared/links'
