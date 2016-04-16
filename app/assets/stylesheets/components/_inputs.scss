@@ -1,0 +1,59 @@
+// --- inputs ------------------------------------------------------------------
+
+.inputs {
+  &__row {
+    @include clearfix;
+    margin-top: $base--gap;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &--inline {
+      display: flex;
+
+      .inputs__row-label {
+        margin-left: $base--gap/2;
+      }
+    }
+  }
+
+  &__row-label {
+    margin-bottom: $base--gap/2;
+  }
+
+  &__row-input {}
+
+  &__label {
+    font-size: .875rem;
+  }
+
+  &__input[type=text],
+  &__input[type=email],
+  &__input[type=password] {
+    width: 100%;
+    height: 2rem;
+    border: .1rem solid $color--gray;
+    box-sizing: border-box;
+    padding: $base--gap/2;
+  }
+
+  &__submit {
+    width: 100%;
+    height: 3rem;
+    background: $color--red;
+    color: $color--white;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: $base--gap*2;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color .2s ease-in-out;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: darken($color--red, 5%);
+    }
+  }
+}

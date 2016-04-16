@@ -23,3 +23,15 @@
     background-image: image-url("#{$image-path}-desktop.#{$format}");
   }
 }
+
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: left;
+  }
+}
