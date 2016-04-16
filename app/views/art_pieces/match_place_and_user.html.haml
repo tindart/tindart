@@ -3,7 +3,8 @@
 
 %main.l-container
   %section.match
-    %h2.match__title= 'Znaleźliśmy użytkownika o podobnym guście!'
-    .match__user= @user_match.username
-    %p= 'Możecie się poznać idąc do:'
-    = @location_match
+    %h2.match__title= 'Znaleźliśmy użytkowników o podobnym guście!'
+    - @users.each do |user|
+      .match__user= user.username
+      %p= 'Możecie się poznać idąc do:'
+      = @location
