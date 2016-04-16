@@ -3,10 +3,7 @@ class CreateLocations < ActiveRecord::Migration
     create_table :locations do |t|
       t.string :name
       t.string :address
-      t.string :decription
-      t.string :photo
-      t.string :tickets
-      t.string :opening_hours
+      t.float :regular_price
 
       t.timestamps null: false
     end
